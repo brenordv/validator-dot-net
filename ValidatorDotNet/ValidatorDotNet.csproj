@@ -14,8 +14,23 @@ Feel free to use as you see fit. This is an open source project, so if you want 
         <PackageTags>core3.1, helpers, validation</PackageTags>
         <RepositoryUrl>https://github.com/brenordv/validator-dot-net</RepositoryUrl>
         <RootNamespace>Raccoon.Ninja.ValidatorDotNet</RootNamespace>
+        <Product>Validator.Net</Product>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\ValidatorDotNet.Documentation.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\ValidatorDotNet.Documentation.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <DocumentationMarkdown>$(MSBuildProjectDirectory)\..\ValidatorDotNet.Documentation.md</DocumentationMarkdown>
+    </PropertyGroup>
+    
     <ItemGroup>
       <Folder Include="Helpers" />
     </ItemGroup>
@@ -42,6 +57,13 @@ Feel free to use as you see fit. This is an open source project, so if you want 
         <AutoGen>True</AutoGen>
         <DependentUpon>DefaultLabels.resx</DependentUpon>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Vsxmd" Version="1.4.5">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
     </ItemGroup>
 
 </Project>

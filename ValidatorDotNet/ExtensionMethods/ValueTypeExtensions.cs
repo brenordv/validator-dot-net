@@ -3,6 +3,9 @@ using System.Numerics;
 
 namespace Raccoon.Ninja.ValidatorDotNet.ExtensionMethods
 {
+    /// <summary>
+    ///     Extension methods for ValueType variables.
+    /// </summary>
     public static class ValueTypeExtensions
     {
         /// <summary>

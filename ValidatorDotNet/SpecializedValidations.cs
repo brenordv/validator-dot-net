@@ -4,8 +4,15 @@ using ValidatorDotNet;
 
 namespace Raccoon.Ninja.ValidatorDotNet
 {
+    /// <summary>
+    ///     Class containing all validation methods.
+    ///     Methods starting with Try will return a boolean, all others will thrown an exception.
+    /// </summary>
     public static partial class Validate
     {
+        /// <summary>
+        ///     Specialized validations are "bundled up" methods that will provide context specific validations.
+        /// </summary>
         public static partial class Specializations
         {
             /// <summary>
