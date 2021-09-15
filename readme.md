@@ -1,11 +1,21 @@
 # Validator .Net
+[![Quality Gate Status](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=alert_status)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+[![Bugs](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=bugs)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+[![Code Smells](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=code_smells)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+[![Technical Debt](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=sqale_index)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+[![Coverage](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=coverage)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+[![Vulnerabilities](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=vulnerabilities)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+[![Duplicated Lines (%)](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=duplicated_lines_density)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+[![Maintainability Rating](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=sqale_rating)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+[![Maintainability Rating](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=sqale_rating)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+[![Security Rating](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=security_rating)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+
+
 This project consist in a handful of convenience methods to perform common validations. You can try to validate something, in which case the method will return a boolean or do a "hard validation" that will throw an exception in case of failure.
 
 All exceptions are in a hierarchy, ensuring ease of use while working with try-catches.
 
 The motivation for this project was to centralize validation helpers and reduce code duplication across a myriad of internal projects. 
-
-100% of this code is covered by unit tests and this project. (I'm working on getting those badges to add here.)
 
 The idea here is not to replace simple if statements, but to create a standardized and clean way to make validations and capture exceptions when any errors occur.
 
