@@ -1,14 +1,14 @@
 # Validator .Net
-[![Quality Gate Status](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=alert_status)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
-[![Bugs](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=bugs)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
-[![Code Smells](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=code_smells)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
-[![Technical Debt](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=sqale_index)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
-[![Coverage](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=coverage)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
-[![Vulnerabilities](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=vulnerabilities)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
-[![Duplicated Lines (%)](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=duplicated_lines_density)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
-[![Maintainability Rating](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=sqale_rating)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
-[![Maintainability Rating](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=sqale_rating)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
-[![Security Rating](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=security_rating)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
+[![Quality Gate Status](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=alert_status)]
+[![Bugs](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=bugs)]
+[![Code Smells](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=code_smells)]
+[![Technical Debt](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=sqale_index)]
+[![Coverage](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=coverage)]
+[![Vulnerabilities](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=vulnerabilities)]
+[![Duplicated Lines (%)](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=duplicated_lines_density)]
+[![Maintainability Rating](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=sqale_rating)]
+[![Maintainability Rating](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=sqale_rating)]
+[![Security Rating](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=security_rating)]
 
 
 This project consist in a handful of convenience methods to perform common validations. You can try to validate something, in which case the method will return a boolean or do a "hard validation" that will throw an exception in case of failure.
