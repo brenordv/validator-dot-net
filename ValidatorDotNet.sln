@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidatorDotNet", "ValidatorDotNet\ValidatorDotNet.csproj", "{3F2E5088-8EE4-435B-829C-336069C91CD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidatorDotNet.Tests", "ValidatorDotNet.Tests\ValidatorDotNet.Tests.csproj", "{EA70304E-8813-4790-A596-1908034EA296}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F2E5088-8EE4-435B-829C-336069C91CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F2E5088-8EE4-435B-829C-336069C91CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F2E5088-8EE4-435B-829C-336069C91CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F2E5088-8EE4-435B-829C-336069C91CD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA70304E-8813-4790-A596-1908034EA296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA70304E-8813-4790-A596-1908034EA296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA70304E-8813-4790-A596-1908034EA296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA70304E-8813-4790-A596-1908034EA296}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

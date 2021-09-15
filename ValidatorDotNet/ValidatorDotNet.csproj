@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Validator.Net</PackageId>
+        <Title>Validator .Net</Title>
+        <Authors>Raccoon Ninja</Authors>
+        <Description>Handful of methods inside Validate class to help perform standardized checks and catch the appropriate exceptions. This is a project ported from a private corporate application in an attempt to reduce code duplication.
+
+Feel free to use as you see fit. This is an open source project, so if you want to change something, please visit the github repository.</Description>
+        <Copyright>Raccoon Ninja</Copyright>
+        <PackageProjectUrl>https://raccoon.ninja</PackageProjectUrl>
+        <PackageTags>core3.1, helpers, validation</PackageTags>
+        <RepositoryUrl>https://github.com/brenordv/validator-dot-net</RepositoryUrl>
+        <RootNamespace>Raccoon.Ninja.ValidatorDotNet</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Helpers" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Internationalization\ValidationErrorMessages.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ValidationErrorMessages.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Internationalization\DefaultLabels.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>DefaultLabels.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Internationalization\ValidationErrorMessages.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ValidationErrorMessages.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Internationalization\DefaultLabels.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>DefaultLabels.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>
