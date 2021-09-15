@@ -1,6 +1,5 @@
 # Validator .Net
 
-[![Quality Gate Status](https://sonar.dtidigital.com.br/api/project_badges/measure?project=Raccoon.Ninja.ValidatorDotNet&metric=alert_status)](https://sonar.dtidigital.com.br/dashboard?id=Raccoon.Ninja.ValidatorDotNet)
 
 
 
