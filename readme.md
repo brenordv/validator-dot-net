@@ -7,7 +7,7 @@ The motivation for this project was to centralize validation helpers and reduce 
 
 100% of this code is covered by unit tests and this project. (I'm working on getting those badges to add here.)
 
-The idea here is not to replace simpel if statements, but to create a standardized and clean way to make validations and capture exceptions when any errors occur.
+The idea here is not to replace simple if statements, but to create a standardized and clean way to make validations and capture exceptions when any errors occur.
 
 # Exception hierarchy
 - System.Exception

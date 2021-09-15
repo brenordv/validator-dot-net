@@ -3,12 +3,12 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageId>Validator.Net</PackageId>
+        <PackageId>raccoon.ninja.validator.net</PackageId>
         <Title>Validator .Net</Title>
         <Authors>Raccoon Ninja</Authors>
         <Description>Handful of methods inside Validate class to help perform standardized checks and catch the appropriate exceptions. This is a project ported from a private corporate application in an attempt to reduce code duplication.
 
-Feel free to use as you see fit. This is an open source project, so if you want to change something, please visit the github repository.</Description>
+Feel free to use as you see fit. This is an open source project, so if you want to change something, please visit the GitHub  repository.</Description>
         <Copyright>Raccoon Ninja</Copyright>
         <PackageProjectUrl>https://raccoon.ninja</PackageProjectUrl>
         <PackageTags>core3.1, helpers, validation</PackageTags>
@@ -17,7 +17,13 @@ Feel free to use as you see fit. This is an open source project, so if you want 
         <Product>Validator.Net</Product>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <FileVersion>1.0.0</FileVersion>
+        <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+        <PackageLicenseFile>MIT-LICENSE.txt</PackageLicenseFile>                
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\MIT-LICENSE.txt" Pack="true" PackagePath="MIT-LICENSE.txt"/>
+    </ItemGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
       <DocumentationFile>bin\Debug\ValidatorDotNet.Documentation.xml</DocumentationFile>
