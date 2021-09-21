@@ -22,7 +22,7 @@ Feel free to use as you see fit. This is an open source project, so if you want 
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\MIT-LICENSE.txt" Pack="true" PackagePath="MIT-LICENSE.txt"/>
+        <None Include="..\MIT-LICENSE.txt" Pack="true" PackagePath="MIT-LICENSE.txt" />
     </ItemGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -36,10 +36,6 @@ Feel free to use as you see fit. This is an open source project, so if you want 
     <PropertyGroup>
         <DocumentationMarkdown>$(MSBuildProjectDirectory)\..\ValidatorDotNet.Documentation.md</DocumentationMarkdown>
     </PropertyGroup>
-    
-    <ItemGroup>
-      <Folder Include="Helpers" />
-    </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Update="Internationalization\ValidationErrorMessages.resx">
