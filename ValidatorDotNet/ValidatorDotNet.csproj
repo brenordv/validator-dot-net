@@ -17,8 +17,9 @@ Feel free to use as you see fit. This is an open source project, so if you want 
         <Product>Validator.Net</Product>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <FileVersion>1.0.0</FileVersion>
-        <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
-        <PackageLicenseFile>MIT-LICENSE.txt</PackageLicenseFile>                
+        <PackageReleaseNotes>Changed minimum UTC value from 1 to -720 (-12h).</PackageReleaseNotes>
+        <PackageLicenseFile>MIT-LICENSE.txt</PackageLicenseFile>
+        <PackageVersion>1.0.1</PackageVersion>                
     </PropertyGroup>
 
     <ItemGroup>

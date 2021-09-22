@@ -1621,7 +1621,8 @@ Maximum acceptable value for UTC
 
 ##### Summary
 
-Minimum acceptable value for UTC
+Minimum acceptable value for UTC: -12 hours.
+    United States Minor Outlying Islands: Baker Island and Howland Island.
 
 <a name='T-Raccoon-Ninja-ValidatorDotNet-Validate'></a>
 ## Validate `type`

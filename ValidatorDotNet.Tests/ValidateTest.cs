@@ -356,7 +356,7 @@ namespace Raccoon.Ninja.ValidatorDotNet.Tests
         [Fact]
         public void TryISDateTimeAfterMin_Success_DefaultMinDate()
         {
-            Assert.False(Validate.TryIsDateTimeAfterMin(DateTime.UtcNow));
+            Assert.True(Validate.TryIsDateTimeAfterMin(DateTime.UtcNow));
         }
         
         [Fact]
@@ -590,8 +590,8 @@ namespace Raccoon.Ninja.ValidatorDotNet.Tests
         
         [Theory]
         [InlineData(20000)]
-        [InlineData(0)]
-        [InlineData(-1)]
+        [InlineData(-750)]
+        [InlineData(-721)]
         public void IsUtcOffsetValid_Error(int offset)
         {
             new List<string>() { "IsUtcOffsetValid_Error", null }.ForEach(label =>

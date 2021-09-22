@@ -58,9 +58,10 @@ namespace Raccoon.Ninja.ValidatorDotNet.Constants
         public static class Utc
         {
             /// <summary>
-            ///     Minimum acceptable value for UTC
+            ///     Minimum acceptable value for UTC: -12 hours.
+            ///     United States Minor Outlying Islands: Baker Island and Howland Island.
             /// </summary>
-            public const int MinValue = 1;
+            public const int MinValue = -720;
             
             /// <summary>
             ///     Maximum acceptable value for UTC
