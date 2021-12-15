@@ -41,11 +41,12 @@ namespace Raccoon.Ninja.ValidatorDotNet
             public static void IsSingleRowAffectedForId(long affectedRows, object id, string label,
                 bool allowNoAffectedLines = false)
             {
-                if (affectedRows == 0 && !allowNoAffectedLines)
-                    throw new NoRowsAffectedException(string.Format(ValidationErrorMessages.NoEntryWithId, label, id));
                 if (affectedRows > 1)
                     throw new UnexpectedException(string.Format(ValidationErrorMessages.MultiRowsAffectedById,
                         affectedRows, label, id));
+                
+                if (!TryIsSingleRowAffectedForId(affectedRows, allowNoAffectedLines))
+                    throw new NoRowsAffectedException(string.Format(ValidationErrorMessages.NoEntryWithId, label, id));
             }
         }
     }

@@ -426,7 +426,7 @@ namespace Raccoon.Ninja.ValidatorDotNet.Tests
             new List<string>() { "IsGreaterThanOrEqualTo_Error", null }.ForEach(label =>
             {
                 var exception =
-                    Assert.Throws<NotGreaterThanException>(() =>
+                    Assert.Throws<NotGreaterThanOrEqualToException>(() =>
                         Validate.IsGreaterThanOrEqualTo(1, 2, label));
 
                 var expected = string.Format(ValidationErrorMessages.NotGreaterThanOrEqualTo, 2, label ?? DefaultLabels.Parameter, 1);

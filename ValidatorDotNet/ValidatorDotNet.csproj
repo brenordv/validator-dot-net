@@ -17,27 +17,21 @@ Feel free to use as you see fit. This is an open source project, so if you want 
         <Product>Validator.Net</Product>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <FileVersion>1.0.0</FileVersion>
-        <PackageReleaseNotes>Changed minimum UTC value from 1 to -720 (-12h).</PackageReleaseNotes>
+        <PackageReleaseNotes>1. Validation method IsGreaterThanOrEqualTo now throws the correct exception (NotGreaterThanOrEqualTo). 
+2. Fixed a bug in IsSingleRowAffectedForId validation.
+3. Changed the documentation generation tool.</PackageReleaseNotes>
         <PackageLicenseFile>MIT-LICENSE.txt</PackageLicenseFile>
-        <PackageVersion>1.0.1</PackageVersion>                
+        <PackageVersion>1.0.2</PackageVersion>                
     </PropertyGroup>
-
+    
     <ItemGroup>
-        <None Include="..\MIT-LICENSE.txt" Pack="true" PackagePath="MIT-LICENSE.txt" />
+        <None Include="..\MIT-LICENSE.txt" Pack="true" PackagePath="MIT-LICENSE.txt" />        
     </ItemGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DocumentationFile>bin\Debug\ValidatorDotNet.Documentation.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>bin\Release\ValidatorDotNet.Documentation.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <DocumentationMarkdown>$(MSBuildProjectDirectory)\..\ValidatorDotNet.Documentation.md</DocumentationMarkdown>
-    </PropertyGroup>
-
+    <Target Name="Building Markdown documentation from XML" BeforeTargets="PostBuildEvent" Condition="'$(Configuration)'=='Debug'">        
+        <Exec Command="xmldocmd $(TargetFileName) ..\..\..\..\Docs --obsolete --quiet --newline lf" WorkingDirectory="$(ProjectDir)bin\$(Configuration)\$(TargetFramework)" />
+    </Target>
+   
     <ItemGroup>
       <EmbeddedResource Update="Internationalization\ValidationErrorMessages.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
@@ -60,13 +54,6 @@ Feel free to use as you see fit. This is an open source project, so if you want 
         <AutoGen>True</AutoGen>
         <DependentUpon>DefaultLabels.resx</DependentUpon>
       </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="Vsxmd" Version="1.4.5">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
     </ItemGroup>
 
 </Project>

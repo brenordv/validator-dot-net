@@ -152,7 +152,7 @@ namespace Raccoon.Ninja.ValidatorDotNet
         {
             if (TryIsGreaterThanOrEqualTo(a, b)) return;
             label ??= DefaultLabels.Parameter;
-            throw new NotGreaterThanException(string.Format(ValidationErrorMessages.NotGreaterThanOrEqualTo, b, label,
+            throw new NotGreaterThanOrEqualToException(string.Format(ValidationErrorMessages.NotGreaterThanOrEqualTo, b, label,
                 a));
         }
 
