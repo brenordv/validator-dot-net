@@ -17,11 +17,9 @@ Feel free to use as you see fit. This is an open source project, so if you want 
         <Product>Validator.Net</Product>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <FileVersion>1.0.0</FileVersion>
-        <PackageReleaseNotes>1. Validation method IsGreaterThanOrEqualTo now throws the correct exception (NotGreaterThanOrEqualTo). 
-2. Fixed a bug in IsSingleRowAffectedForId validation.
-3. Changed the documentation generation tool.</PackageReleaseNotes>
+        <PackageReleaseNotes>1. Fixed some placeholders in the validation messages.</PackageReleaseNotes>
         <PackageLicenseFile>MIT-LICENSE.txt</PackageLicenseFile>
-        <PackageVersion>1.0.2</PackageVersion>                
+        <PackageVersion>1.0.3</PackageVersion>                
     </PropertyGroup>
     
     <ItemGroup>

@@ -1,6 +1,5 @@
-﻿
-using Raccoon.Ninja.ValidatorDotNet.Exceptions;
-using ValidatorDotNet;
+﻿using Raccoon.Ninja.ValidatorDotNet.Exceptions;
+using Raccoon.Ninja.ValidatorDotNet.Internationalization;
 
 namespace Raccoon.Ninja.ValidatorDotNet
 {
@@ -22,12 +21,11 @@ namespace Raccoon.Ninja.ValidatorDotNet
             /// <param name="affectedRows">number of affected rows</param>
             /// <param name="allowNoAffectedLines">If true, will not throw an error when there's no affected rows</param>
             /// <returns>true if is 'single row affected' or false otherwise</returns>
-
             public static bool TryIsSingleRowAffectedForId(long affectedRows, bool allowNoAffectedLines = false)
             {
                 return affectedRows == 1 || (affectedRows == 0 && allowNoAffectedLines);
             }
-            
+
             /// <summary>
             ///     Ported from private project.
             ///     Checks if a given "affected rows" variable value is equal to one.
@@ -44,7 +42,7 @@ namespace Raccoon.Ninja.ValidatorDotNet
                 if (affectedRows > 1)
                     throw new UnexpectedException(string.Format(ValidationErrorMessages.MultiRowsAffectedById,
                         affectedRows, label, id));
-                
+
                 if (!TryIsSingleRowAffectedForId(affectedRows, allowNoAffectedLines))
                     throw new NoRowsAffectedException(string.Format(ValidationErrorMessages.NoEntryWithId, label, id));
             }

@@ -4,7 +4,6 @@ using System.Linq;
 using Raccoon.Ninja.ValidatorDotNet.Constants;
 using Raccoon.Ninja.ValidatorDotNet.Exceptions;
 using Raccoon.Ninja.ValidatorDotNet.Internationalization;
-using ValidatorDotNet;
 
 namespace Raccoon.Ninja.ValidatorDotNet
 {

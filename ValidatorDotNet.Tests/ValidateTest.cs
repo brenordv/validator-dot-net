@@ -4,7 +4,6 @@ using Raccoon.Ninja.ValidatorDotNet.Constants;
 using Raccoon.Ninja.ValidatorDotNet.Exceptions;
 using Raccoon.Ninja.ValidatorDotNet.Internationalization;
 using Raccoon.Ninja.ValidatorDotNet.Tests.Mocks;
-using ValidatorDotNet;
 using Xunit;
 
 namespace Raccoon.Ninja.ValidatorDotNet.Tests
