@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ValidatorDotNet {
+namespace Raccoon.Ninja.ValidatorDotNet.Internationalization {
     using System;
     
     
@@ -19,7 +19,7 @@ namespace ValidatorDotNet {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class ValidationErrorMessages {
@@ -88,7 +88,7 @@ namespace ValidatorDotNet {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The list in parameter &apos;{0}&apos;  contains invalid {0} enums.
+        ///   Looks up a localized string similar to The list in parameter &apos;{0}&apos; contains invalid {1} enums.
         /// </summary>
         public static string InvalidEnumList {
             get {
@@ -97,7 +97,7 @@ namespace ValidatorDotNet {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Parameter &apos;{0}&apos; has a value of &apos;{1}&apos; but it is not a valid enum of type &apos;{1}&apos;.
+        ///   Looks up a localized string similar to Parameter &apos;{0}&apos; has a value of &apos;{1}&apos; but it is not a valid enum of type &apos;{2}&apos;.
         /// </summary>
         public static string InvalidEnumValue {
             get {
@@ -124,7 +124,7 @@ namespace ValidatorDotNet {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WARNING! Found &apos;{0}&apos; affected rows of type {0} with id {1}.
+        ///   Looks up a localized string similar to WARNING! Found &apos;{0}&apos; affected rows of type {1} with id {2}.
         /// </summary>
         public static string MultiRowsAffectedById {
             get {
