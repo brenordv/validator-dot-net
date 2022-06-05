@@ -43,5 +43,7 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"brenordv_validator-dot-net" /o:"raccoon-ninja" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet test --collect "Code Coverage"
+          dotnet build -c debug
+          dotnet tool install --global coverlet.console
+          coverlet .\ValidatorDotNet.Tests\bin\Debug\net6.0\ValidatorDotNet.Tests.dll --target "dotnet" --targetargs "test --no-build" -f=opencover -o="coverage.xml"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
