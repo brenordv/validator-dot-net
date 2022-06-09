@@ -1,3 +1,4 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=bugs)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
@@ -5,7 +6,6 @@
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=coverage)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=brenordv_validator-dot-net&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=brenordv_validator-dot-net)
