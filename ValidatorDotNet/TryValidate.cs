@@ -47,7 +47,7 @@ namespace Raccoon.Ninja.ValidatorDotNet
         /// <param name="obj">object to be checked</param>
         /// <param name="propertyName">param name</param>
         /// <returns>true if has parameter/false otherwise</returns>
-        public static bool TryDynamicHasProperty(dynamic obj, string propertyName)
+        public static bool TryDynamicHasProperty(object obj, string propertyName)
         {
             return !TryIsNull(obj) && obj.GetType().GetProperty(propertyName) != null;
         }
@@ -133,7 +133,7 @@ namespace Raccoon.Ninja.ValidatorDotNet
         {
             return a.CompareTo(b) < 0;
         }
-        
+
         /// <summary>
         ///     Checks if A is less than or equal to B.
         /// </summary>
@@ -176,7 +176,9 @@ namespace Raccoon.Ninja.ValidatorDotNet
         /// <returns>true if it is/false otherwise.</returns>
         public static bool TryIsDateTimeAfterMin(DateTime dt, DateTime? minDate = null)
         {
-            minDate ??= Constraints.MinDateForDatabase.SqlServer;
+            if (minDate == null)
+                minDate = Constraints.MinDateForDatabase.SqlServer;
+
             return dt >= minDate.Value;
         }
 
@@ -201,7 +203,7 @@ namespace Raccoon.Ninja.ValidatorDotNet
             var success = Guid.TryParseExact(guid, "D", out var parsed);
             return success && parsed != Guid.Empty;
         }
-        
+
         /// <summary>
         ///     Checks if an integer represents a valid UTC offset.
         /// </summary>
@@ -209,7 +211,7 @@ namespace Raccoon.Ninja.ValidatorDotNet
         /// <returns>true if it is a valid utc-offset, false otherwise.</returns>
         public static bool TryIsValidUtcOffset(int utcOffset)
         {
-            return TryIsGreaterThanOrEqualTo(utcOffset, Constraints.Utc.MinValue) && 
+            return TryIsGreaterThanOrEqualTo(utcOffset, Constraints.Utc.MinValue) &&
                    TryIsLessThanOrEqualTo(utcOffset, Constraints.Utc.MaxValue);
         }
     }

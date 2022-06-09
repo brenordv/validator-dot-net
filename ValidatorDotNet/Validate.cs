@@ -19,11 +19,12 @@ namespace Raccoon.Ninja.ValidatorDotNet
         /// <exception cref="TextNullOrEmptyException">If the object is null or only spaces</exception>
         public static void IsTextWithinCharLimit(string text, int maxChars, string label = null)
         {
-            label ??= DefaultLabels.Text;
-            
+            if (label == null)
+                label = DefaultLabels.Text;
+
             IsTextNotNull(text, label);
             if (TryIsTextWithinCharLimit(text, maxChars)) return;
-            
+
             throw new TextTooBigException(string.Format(ValidationErrorMessages.TextSizeExceededMaxChars, label,
                 maxChars));
         }
@@ -38,7 +39,10 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void IsNotNull(object obj, string label = null)
         {
             if (!TryIsNull(obj)) return;
-            label ??= DefaultLabels.Object;
+
+            if (label == null)
+                label = DefaultLabels.Object;
+
             throw new NullRequiredValueException(string.Format(ValidationErrorMessages.NullRequiredValue, label));
         }
 
@@ -51,7 +55,10 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void IsTextNotNull(string text, string label = null)
         {
             if (!TryIsTextNull(text)) return;
-            label ??= DefaultLabels.Text;
+
+            if (label == null)
+                label = DefaultLabels.Text;
+
             throw new TextNullOrEmptyException(string.Format(ValidationErrorMessages.NullRequiredValue, label));
         }
 
@@ -63,10 +70,13 @@ namespace Raccoon.Ninja.ValidatorDotNet
         /// <param name="propertyName">param name</param>
         /// <param name="label">Label to be used in the error message</param>
         /// <exception cref="DynamicPropertyNotFoundException">If the object is null or only spaces</exception>
-        public static void DynamicHasProperty(dynamic obj, string propertyName, string label = null)
+        public static void DynamicHasProperty(object obj, string propertyName, string label = null)
         {
             if (TryDynamicHasProperty(obj, propertyName)) return;
-            label ??= DefaultLabels.Object;
+
+            if (label == null)
+                label = DefaultLabels.Object;
+
             throw new DynamicPropertyNotFoundException(string.Format(ValidationErrorMessages.DynamicPropMissing,
                 propertyName, label));
         }
@@ -79,7 +89,9 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void CanBeInt(string text)
         {
             IsTextNotNull(text, nameof(text));
+
             if (TryCanBeInt(text)) return;
+
             throw new InvalidIntegerException(string.Format(ValidationErrorMessages.StringIsNotANumber, text));
         }
 
@@ -94,7 +106,10 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void HasElements<T>(ICollection<T> list, string label = null)
         {
             if (TryHasElements(list)) return;
-            label ??= DefaultLabels.List;
+
+            if (label == null)
+                label = DefaultLabels.List;
+
             throw new EmptyListException(string.Format(ValidationErrorMessages.EmptyList, label));
         }
 
@@ -119,7 +134,10 @@ namespace Raccoon.Ninja.ValidatorDotNet
             where T : struct, IComparable
         {
             if (TryAllPositiveElements(list)) return;
-            label ??= DefaultLabels.List;
+
+            if (label == null)
+                label = DefaultLabels.List;
+
             throw new NotAllNumbersPositiveException(string.Format(ValidationErrorMessages.NotAllNumbersArePositive,
                 label));
         }
@@ -135,7 +153,10 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void IsGreaterThan<T>(T a, T b, string label = null) where T : IComparable
         {
             if (TryIsGreaterThan(a, b)) return;
-            label ??= DefaultLabels.Parameter;
+
+            if (label == null)
+                label = DefaultLabels.Parameter;
+
             throw new NotGreaterThanException(string.Format(ValidationErrorMessages.NotGreaterThan, b, label, a));
         }
 
@@ -150,8 +171,12 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void IsGreaterThanOrEqualTo<T>(T a, T b, string label = null) where T : IComparable
         {
             if (TryIsGreaterThanOrEqualTo(a, b)) return;
-            label ??= DefaultLabels.Parameter;
-            throw new NotGreaterThanOrEqualToException(string.Format(ValidationErrorMessages.NotGreaterThanOrEqualTo, b, label,
+
+            if (label == null)
+                label = DefaultLabels.Parameter;
+
+            throw new NotGreaterThanOrEqualToException(string.Format(ValidationErrorMessages.NotGreaterThanOrEqualTo, b,
+                label,
                 a));
         }
 
@@ -166,7 +191,10 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void IsLessThan<T>(T a, T b, string label = null) where T : IComparable
         {
             if (TryIsLessThan(a, b)) return;
-            label ??= DefaultLabels.Parameter;
+
+            if (label == null)
+                label = DefaultLabels.Parameter;
+
             throw new NotLessThanException(string.Format(ValidationErrorMessages.NotLessThan, b, label, a));
         }
 
@@ -181,7 +209,10 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void IsLessThanOrEqualTo<T>(T a, T b, string label = null) where T : IComparable
         {
             if (TryIsLessThanOrEqualTo(a, b)) return;
-            label ??= DefaultLabels.Parameter;
+
+            if (label == null)
+                label = DefaultLabels.Parameter;
+
             throw new NotLessThanOrEqualToException(string.Format(ValidationErrorMessages.NotLessThanOrEqualTo, b,
                 label, a));
         }
@@ -197,7 +228,10 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void IsEqualTo<T>(T a, T b, string label = null) where T : IComparable
         {
             if (TryIsEqualTo(a, b)) return;
-            label ??= DefaultLabels.Parameter;
+
+            if (label == null)
+                label = DefaultLabels.Parameter;
+
             throw new NotEqualToException(string.Format(ValidationErrorMessages.NotEqualTo, label, b, a));
         }
 
@@ -210,7 +244,10 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void IsDateTimeUtc(DateTime dt, string label = null)
         {
             if (TryIsDateTimeUtc(dt)) return;
-            label ??= DefaultLabels.Parameter;
+
+            if (label == null)
+                label = DefaultLabels.Parameter;
+
             throw new DateTimeNotInUtcException(string.Format(ValidationErrorMessages.DateTimeNotInUTC, label, dt));
         }
 
@@ -223,10 +260,16 @@ namespace Raccoon.Ninja.ValidatorDotNet
         /// <exception cref="NotGreaterThanOrEqualToException">if DateTime object is before the minimum accepted</exception>
         public static void IsDateTimeAfterMin(DateTime dt, string label = null, DateTime? minDate = null)
         {
-            minDate ??= Constraints.MinDateForDatabase.SqlServer;
+            if (minDate == null)
+                minDate = Constraints.MinDateForDatabase.SqlServer;
+
             if (TryIsDateTimeAfterMin(dt, minDate)) return;
-            label ??= DefaultLabels.Parameter;
-            throw new NotGreaterThanOrEqualToException(string.Format(ValidationErrorMessages.NotGreaterThanOrEqualTo, minDate,
+
+            if (label == null)
+                label = DefaultLabels.Parameter;
+
+            throw new NotGreaterThanOrEqualToException(string.Format(ValidationErrorMessages.NotGreaterThanOrEqualTo,
+                minDate,
                 label, dt));
         }
 
@@ -241,8 +284,12 @@ namespace Raccoon.Ninja.ValidatorDotNet
         {
             if (TryIsEnumValid(enumObj))
                 return;
-            label ??= DefaultLabels.Parameter;
+
+            if (label == null)
+                label = DefaultLabels.Parameter;
+
             var enumType = enumObj.GetType();
+
             throw new InvalidEnumException(string.Format(ValidationErrorMessages.InvalidEnumValue, label, enumObj,
                 enumType.Name));
         }
@@ -258,14 +305,17 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void AllEnumValid<T>(ICollection<T> list, string label = null) where T : Enum
         {
             var enumType = typeof(T);
-            label ??= DefaultLabels.List;
+
+            if (label == null)
+                label = DefaultLabels.List;
 
             IsNotNull(list, label);
 
             if (!list.Any() || list.All(TryIsEnumValid))
                 return;
 
-            throw new InvalidEnumException(string.Format(ValidationErrorMessages.InvalidEnumList, label, enumType.Name));
+            throw new InvalidEnumException(string.Format(ValidationErrorMessages.InvalidEnumList, label,
+                enumType.Name));
         }
 
         /// <summary>
@@ -277,10 +327,13 @@ namespace Raccoon.Ninja.ValidatorDotNet
         public static void IsGuidValid(string guid, string label = null)
         {
             if (TryIsValidGuid(guid)) return;
-            label ??= DefaultLabels.Parameter;
+
+            if (label == null)
+                label = DefaultLabels.Parameter;
+
             throw new InvalidGuidException(string.Format(ValidationErrorMessages.InvalidGuid, label));
         }
-        
+
         /// <summary>
         ///     Checks if an integer represents a valid UTC offset.
         /// </summary>
@@ -288,21 +341,18 @@ namespace Raccoon.Ninja.ValidatorDotNet
         /// <param name="label">Label to be used in the error message</param>
         public static void IsUtcOffsetValid(int utcOffset, string label = null)
         {
-            
             if (TryIsValidUtcOffset(utcOffset)) return;
-            label ??= DefaultLabels.UtcOffset;
+
+            if (label == null)
+                label = DefaultLabels.UtcOffset;
 
             throw new InvalidUtcOffsetException(
                 string.Format(
                     ValidationErrorMessages.InvalidUtcValue,
                     label,
-                    utcOffset, 
-                    Constraints.Utc.MinValue, 
+                    utcOffset,
+                    Constraints.Utc.MinValue,
                     Constraints.Utc.MaxValue));
-
         }
-        
-
-        
     }
 }
