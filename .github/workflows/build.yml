@@ -50,3 +50,7 @@ jobs:
           dotnet build --configuration Release
           dotnet-coverage collect 'dotnet test' -f xml -o 'coverage.xml'
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+      - name: Publishing coverage.xml
+        uses: actions/upload-artifact@v3
+        with:
+          path: coverage.xml
