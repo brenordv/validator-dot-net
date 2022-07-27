@@ -26,7 +26,7 @@ Feel free to use as you see fit. This is an open source project, so if you want 
         <None Include="..\MIT-LICENSE.txt" Pack="true" PackagePath="MIT-LICENSE.txt" />        
     </ItemGroup>
 
-    <Target Name="Building Markdown documentation from XML" BeforeTargets="PostBuildEvent" Condition="'$(Configuration)'=='Debug'">        
+    <Target Name="Building Markdown documentation from XML" BeforeTargets="PostBuildEvent" Condition="'$(Configuration)'=='Release'">        
         <Exec Command="xmldocmd $(TargetFileName) ..\..\..\..\Docs --obsolete --quiet --newline lf" WorkingDirectory="$(ProjectDir)bin\$(Configuration)\$(TargetFramework)" />
     </Target>
    

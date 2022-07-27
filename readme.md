@@ -56,3 +56,5 @@ To build this package locally, you must have the doc generator installed:
 ```shell
 dotnet tool install xmldocmd -g
 ```
+
+The documentation will be (re-)generated automatically after every Release build. 
