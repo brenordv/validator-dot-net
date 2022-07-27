@@ -11,15 +11,15 @@
 Feel free to use as you see fit. This is an open source project, so if you want to change something, please visit the GitHub  repository.</Description>
         <Copyright>Raccoon Ninja</Copyright>
         <PackageProjectUrl>https://raccoon.ninja</PackageProjectUrl>
-        <PackageTags>core3.1, helpers, validation</PackageTags>
+        <PackageTags>netstandard2.0, helpers, validation</PackageTags>
         <RepositoryUrl>https://github.com/brenordv/validator-dot-net</RepositoryUrl>
         <RootNamespace>Raccoon.Ninja.ValidatorDotNet</RootNamespace>
         <Product>Validator.Net</Product>
-        <AssemblyVersion>1.0.0</AssemblyVersion>
-        <FileVersion>1.0.0</FileVersion>
-        <PackageReleaseNotes>1. Fixed some placeholders in the validation messages.</PackageReleaseNotes>
+        <AssemblyVersion>2.0.0</AssemblyVersion>
+        <FileVersion>2.0.0</FileVersion>
+        <PackageReleaseNotes>Changed target framework from netcoreapp3.1  to netstandard2.0 for compatibility purposes. </PackageReleaseNotes>
         <PackageLicenseFile>MIT-LICENSE.txt</PackageLicenseFile>
-        <PackageVersion>1.0.3</PackageVersion>                
+        <PackageVersion>2.0.0</PackageVersion>                
     </PropertyGroup>
     
     <ItemGroup>
